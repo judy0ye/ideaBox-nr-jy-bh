@@ -65,3 +65,26 @@ form {
     width:62vw;
     height: 8dvh;
 }
+
+.card-grid{
+    height: 50vh;
+    background-color: #EAEAF4;
+    margin-bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: auto;
+}
+
+.mini-card{
+    height: 250px;
+    width: 200px;
+    display: flex;
+    border: solid black;
+    border-width: thick;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
