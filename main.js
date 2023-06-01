@@ -6,6 +6,7 @@ var currentIdea;
 var saveButton = document.querySelector('.save');
 var titleInput = document.getElementById('input-title')
 var bodyInput = document.getElementById('input-body')
+var cardGrid = document.querySelector('.card-grid');
 
 // eventListeners
 saveButton.addEventListener('click', function(e) {
@@ -29,13 +30,23 @@ function makeNewIdea(e) {
     currentIdea = createIdea(title, body)
 
     for (var i = 0; i < ideas.length; i++) {
-        if (currentIdea.title === ideas[i].title && currentIdea.body === ideas[i].body) {
+        if (currentIdea.title === ideas[i].title || currentIdea.body === ideas[i].body) {
             return
         }
     }
-    ideas.push(currentIdea)  
+    ideas.push(currentIdea)
+    showCards();  
 }
 
 
-  
+function showCards(){
+    cardGrid.innerHTML = '';
+    for(var i = 0; i < ideas.length; i++){
+        cardGrid.innerHTML += `
+        <article class="mini-card" id="${ideas[i].id}">
+            <h2> ${ideas[i].title} </h2>
+            <p> ${ideas[i].body}</p>
+            </article> `
+    }
 
+}
