@@ -3,7 +3,7 @@ var ideas = [];
 var currentIdea;
 
 // querySelectors
-var saveButton = document.querySelector('.save');
+var saveButton = document.querySelector('.save-button');
 var titleInput = document.getElementById('input-title')
 var bodyInput = document.getElementById('input-body')
 var cardGrid = document.querySelector('.card-grid');
