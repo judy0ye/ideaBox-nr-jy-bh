@@ -9,18 +9,20 @@
 </head>
 <body>
     <header>
-        <h1 class="header-title">IdeaBox</h1>
+        <p class="header-title">IdeaBox</p>
     </header>
     <main>
         <section>
             <form class="idea-form">
-                <label for="input-title">Title</label>
-                <input type="text" id="input-title" name="input-title">
-                <br>
-                <label for="input-body">Body</label>
-                <input type="text" id="input-body" name="input-body">
-                <br>
-                <button class="save">Save</button>
+                <article class="title-container">
+                    <label class="title-label" for=input-title">Title</label>
+                    <input class="title-input" type="text" id="input-title" name="input-title">
+                </article>
+                <article class="body-container">
+                    <label class="body-label" for="input-body">Body</label>
+                    <input class="body-input" type="text" id="input-body" name="input-body">
+                </article>   
+                    <button class="save-button">Save</button>
             </form>
         </section>
         <section>

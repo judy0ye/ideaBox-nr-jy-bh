@@ -1,67 +1,84 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     background-color: #EAEAF4;
     display: flex;
 }
 
 header {
     background-color: #1F1F3C;
-    color: #FFFFFF;
-    font-size: 30px;
-    font-weight: 300;
+    color:#EAEAF4;
+    font-size: 100px;
+    font-weight: 700;
     height: 100dvh;
-    width: 25%;
+    width: 25vw;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-}
-
-main {
-    background-color: #A8AAD2;
-    color: #1F1F3C;
-    font-size: 20px;
-    font-weight: 250;
-    height: 50dvh;
-    width: 75vw;
-   
-}
+} 
 
 form {
+    background-color: #A8AAD2;
+    color: #1F1F3C;
+    font-size: 40px;
+    font-weight: 300;
+    /* height: 40dvh; */
+    width: 75vw;
+    padding: 1em 2em;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
-    align-content: center;
 }
 
-.idea-form label {
-    display: inline-block;
-    width: 150px;
-    text-align: left;
+.title-container {
+    display: flex;
+    justify-content: baseline;
+    gap: 40px;
+    padding-bottom: 2em;;
+} 
+
+.body-container {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 1em;
+} 
+
+.title-input {
+    border: 5px solid #1F1F3C;
+    height: 5dvh;
+    width: 61.5vw;
+
 }
 
+.body-input {
+    border: 5px solid #1F1F3C;
+    height: 10dvh;
+    width: 61.5vw;
+}
 
-.save {
+.save-button {
     background-color: #1F1F3C;
-    border: solid #1F1F3C;
-    font-size: 20px;
+    border-width: 5px solid #1F1F3C;
     color: #FFFFFF;
-    width:60vw;
+    font-size: 50px;
+    margin-left: 120px;
+    width:62vw;
     height: 8dvh;
-    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
-#input-title {
+/* #input-title {
     border: solid #1F1F3C;
     height: 5dvh;
     width: 59vw;
-}
+} */
 
-#input-body {
+/* #input-body {
     border: solid #1F1F3C; 
     height: 12dvh;
     width: 59vw;
-}
+} */
 
  
