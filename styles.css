@@ -64,6 +64,16 @@ form {
     margin-left: 120px;
     width:62vw;
     height: 8dvh;
+    cursor: pointer;
+}
+
+.save-button:hover:not([disabled]){
+    color: yellow;
+}
+
+.save-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .card-grid{
