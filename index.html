@@ -16,13 +16,13 @@
             <form class="idea-form">
                 <article class="title-container">
                     <label class="title-label" for=input-title">Title</label>
-                    <input class="title-input" type="text" id="input-title" name="input-title">
+                    <input class="title-input" type="text" id="input-title" name="input-title" oninput="checkInput()">
                 </article>
                 <article class="body-container">
                     <label class="body-label" for="input-body">Body</label>
-                    <input class="body-input" type="text" id="input-body" name="input-body">
+                    <input class="body-input" type="text" id="input-body" name="input-body" oninput="checkInput()"">
                 </article>   
-                    <button class="save-button">Save</button>
+                    <button class="save-button" disabled>Save</button>
             </form>
         </section>
         <section class="card-grid">
