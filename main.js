@@ -26,16 +26,6 @@ saveButton.addEventListener('mouseout', function(){
     saveButton.classList.remove('hover');
 })
 
-saveButton.addEventListener('mouseover', function(){
-    if(!saveButton.disabled){
-        saveButton.classList.add('hover');
-    }
-})
-
-saveButton.addEventListener('mouseout', function(){
-    saveButton.classList.remove('hover');
-})
-
 // functions
 function createIdea(title, body) {
   return {
@@ -59,25 +49,15 @@ function makeNewIdea(e) {
     ) {
       return;
     }
+  }
     ideas.push(currentIdea)
     clearInputs();
     saveButton.disabled = true;
-    clearInputs();
-    saveButton.disabled = true;
     showCards();  
-    }
 }
 
-function showCards(){
-    cardGrid.innerHTML = '';
-    for(var i = 0; i < ideas.length; i++){
-        cardGrid.innerHTML += `
-        <article class="mini-card" id="${ideas[i].id}">
-            <h2> ${ideas[i].title} </h2>
-            <p> ${ideas[i].body}</p>
-            </article> `
-    }
-}
+
+
 
 function clearInputs(){
     titleInput.value = '';
@@ -108,16 +88,6 @@ function showCards() {
   }
 }
 
-function clearInputs() {
-  titleInput.value = "";
-  bodyInput.value = "";
-}
-}
-
-function clearInputs(){
-    titleInput.value = '';
-    bodyInput.value= '';
-}
 
 function deleteMiniCard(e) {
   for (var i = 0; i < ideas.length; i++) {
