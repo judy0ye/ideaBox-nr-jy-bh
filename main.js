@@ -26,6 +26,16 @@ saveButton.addEventListener('mouseout', function(){
     saveButton.classList.remove('hover');
 })
 
+saveButton.addEventListener('mouseover', function(){
+    if(!saveButton.disabled){
+        saveButton.classList.add('hover');
+    }
+})
+
+saveButton.addEventListener('mouseout', function(){
+    saveButton.classList.remove('hover');
+})
+
 // functions
 function createIdea(title, body) {
   return {
@@ -50,6 +60,8 @@ function makeNewIdea(e) {
       return;
     }
     ideas.push(currentIdea)
+    clearInputs();
+    saveButton.disabled = true;
     clearInputs();
     saveButton.disabled = true;
     showCards();  
@@ -99,6 +111,12 @@ function showCards() {
 function clearInputs() {
   titleInput.value = "";
   bodyInput.value = "";
+}
+}
+
+function clearInputs(){
+    titleInput.value = '';
+    bodyInput.value= '';
 }
 
 function deleteMiniCard(e) {

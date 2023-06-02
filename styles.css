@@ -9,11 +9,12 @@ body {
 header {
     background-color: #1F1F3C;
     color:#EAEAF4;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 700;
     height: 100dvh;
     width: 25vw;
     display: flex;
+    justify-content: flex-start;
     flex-flow: column wrap;
     align-content: center;
 } 
@@ -23,11 +24,25 @@ form {
     color: #1F1F3C;
     font-size: 40px;
     font-weight: 300;
-    /* height: 40dvh; */
+    height: 40dvh;
     width: 75vw;
     padding: 1em 2em;
     display: flex;
     flex-flow: column wrap;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    }
+
+.header-title {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 10px;
 }
 
 .title-container {
@@ -44,30 +59,54 @@ form {
 } 
 
 .title-input {
-    border: 5px solid #1F1F3C;
+    background-color: #FFFFFF;
+    border: 6px solid #1F1F3C;
     height: 5dvh;
-    width: 61.5vw;
+    width: 65vw;
 
 }
 
 .body-input {
-    border: 5px solid #1F1F3C;
-    height: 10dvh;
-    width: 61.5vw;
+    background-color: #FFFFFF;
+    border: 6px solid #1F1F3C;
+    height: 12dvh;
+    width: 65vw;
+}
+
+.title-label {
+    padding-top: 10px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.body-label {
+    padding-top: 40px;
+    font-size: 40px;
+    font-weight: 300;
 }
 
 .save-button {
     background-color: #1F1F3C;
-    border-width: 5px solid #1F1F3C;
-    color: #FFFFFF;
+    border: 8px solid #1F1F3C;
+    color: #EAEAF4;
     font-size: 50px;
     margin-left: 120px;
-    width:62vw;
-    height: 8dvh;
+    width:66vw;
+    height: 10dvh;
+    cursor: pointer;
 }
 
-.card-grid{
-    height: 50vh;
+.save-button:hover:not([disabled]){
+    color: yellow;
+}
+
+.save-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card-grid {
+    height: 50dvh;
     background-color: #EAEAF4;
     margin-bottom: 0;
     display:flex;
@@ -77,16 +116,17 @@ form {
     overflow: auto;
 }
 
-.mini-card{
-    height: 250px;
-    width: 200px;
+.mini-card {
+    height: 45dvh;
+    width: 20vw;
+    border: 8px solid #1F1F3C;
+    background-color: #FFFFFF;
+    color: #1F1F3C;
+    font-size: 40px;
     display: flex;
-    border: solid black;
-    border-width: thick;
-    align-items:center;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    align-items:center; 
 }
 
 
