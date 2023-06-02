@@ -89,11 +89,6 @@ form {
     flex-wrap: wrap;
 }
 
-/* .svg {
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
-} */
 
 .delete-button {
     background-image: url(./assets/delete.svg);
@@ -103,7 +98,8 @@ form {
     border: none;
     background-repeat: no-repeat;
 }
-#mini-card-header {
+
+.mini-card-header {
     background-color: #1F1F3C;
     height: 2.5rem;
     margin-top: -5rem;
