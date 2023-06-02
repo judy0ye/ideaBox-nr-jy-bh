@@ -93,6 +93,16 @@ p {
     margin-left: 120px;
     width:66vw;
     height: 10dvh;
+    cursor: pointer;
+}
+
+.save-button:hover:not([disabled]){
+    color: yellow;
+}
+
+.save-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .card-grid {
