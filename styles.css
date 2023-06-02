@@ -95,7 +95,7 @@ form {
     width: 30px;
 } */
 
-#delete-button {
+.delete-button {
     background-image: url(./assets/delete.svg);
     background-color: transparent;
     height: 3rem;
