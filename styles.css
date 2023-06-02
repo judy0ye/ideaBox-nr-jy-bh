@@ -128,3 +128,22 @@ p {
     flex-flow: column wrap;
     align-items:center; 
 }
+
+
+.delete-button {
+    background-image: url(./assets/delete.svg);
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.mini-card-header {
+    background-color: #1F1F3C;
+    height: 2.5rem;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: center;
+    align-content: end;
+}
