@@ -13,6 +13,16 @@ saveButton.addEventListener('click', function(e) {
     makeNewIdea(e)
 });
 
+saveButton.addEventListener('mouseover', function(){
+    if(!saveButton.disabled){
+        saveButton.classList.add('hover');
+    }
+})
+
+saveButton.addEventListener('mouseout', function(){
+    saveButton.classList.remove('hover');
+})
+
 // functions
 function createIdea(title, body) {
     return {
@@ -35,6 +45,8 @@ function makeNewIdea(e) {
         }
     }
     ideas.push(currentIdea)
+    clearInputs();
+    saveButton.disabled = true;
     showCards();  
 }
 
@@ -48,5 +60,19 @@ function showCards(){
             <p> ${ideas[i].body}</p>
             </article> `
     }
-
 }
+
+function clearInputs(){
+    titleInput.value = '';
+    bodyInput.value= '';
+}
+
+function checkInput(){
+    if(titleInput.value.trim() !== '' && bodyInput.value.trim() !== ''){
+        saveButton.disabled = false;
+    }
+    else{
+        saveButton.disabled = true;
+    }
+}
+
