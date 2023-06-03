@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <p class="header-title">IdeaBox</p>
+        <h1 class="header-title">IdeaBox</h1>
     </header>
     <main>
         <section>
@@ -17,19 +17,18 @@
                 <article class="title-container">
                     <label class="title-label" for="input-title">Title</label>
                     <input class="title-input" type="text" id="input-title" name="input-title" oninput="checkInput()">
-                    
                 </article>
                 <article class="body-container">
                     <label class="body-label" for="input-body">Body</label>
                     <input class="body-input" type="text" id="input-body" name="input-body" oninput="checkInput()">
-                    
                 </article>   
                     <button class="save-button" disabled>Save</button>
-                   
             </form>
         </section>
         <section class="card-grid">
-        
+            <div class="mini-card">Card 1</div>
+            <div class="mini-card">Card 2</div>
+            <div class="mini-card">Card 3</div>
         </section>
     </main>
     <script src="main.js"></script>
