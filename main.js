@@ -9,11 +9,14 @@ var bodyInput = document.getElementById("input-body");
 var cardGrid = document.querySelector(".card-grid");
 
 // eventListeners
-saveButton.addEventListener("click", function (e) {
+saveButton.addEventListener("click", function(e) {
   makeNewIdea(e);
 });
-cardGrid.addEventListener("click", function (e) {
+cardGrid.addEventListener("click", function(e) {
   deleteMiniCard(e);
+});
+cardGrid.addEventListener('click', function(e) {
+  makeFavorite(e)
 });
 
 saveButton.addEventListener('mouseover', function(){
@@ -32,6 +35,7 @@ function createIdea(title, body) {
     title: title,
     body: body,
     id: Date.now(),
+    isFavorite: false
   };
 }
 
@@ -80,6 +84,8 @@ function showCards() {
     cardGrid.innerHTML += `
         <article class="mini-card" id="${ideas[i].id}">
             <header class="mini-card-header">
+                <button class="orange-star hidden"></button> 
+                <button class="white-star"></button>
                 <button class="delete-button"></button>
             </header>
             <h2> ${ideas[i].title} </h2>
@@ -91,10 +97,30 @@ function showCards() {
 
 function deleteMiniCard(e) {
   for (var i = 0; i < ideas.length; i++) {
-    console.log(e.target.parentElement.parentElement);
-    if (e.target.classList.contains("delete-button")) {
-      e.target.parentElement.parentElement.remove();
+    if (e.target.classList.contains('delete-button')) {
       ideas.splice(i, 1);
+      showCards();
     }
   }
 }
+
+function toggleClass(element, className) {
+  element.classList.toggle(className)
+}
+
+function makeFavorite(e) {
+  for (var i = 0; i < ideas.length; i++) {
+    if (e.target.classList.contains('white-star')) {
+      ideas[i].isFavorite = true;
+      toggleClass(e.target, 'hidden');
+      toggleClass(e.target.parentElement.firstElementChild, 'hidden')
+    }
+    if (e.target.classList.contains('orange-star')) {
+      console.log('potato')
+      ideas[i].isFavorite = false;
+      toggleClass(e.target, 'hidden');
+      toggleClass(e.target.parentElement.children[1], 'hidden')
+    }
+  } 
+}
+
