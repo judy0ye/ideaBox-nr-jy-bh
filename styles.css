@@ -14,7 +14,6 @@ header {
     background-color: #1F1F3C;
     color:#EAEAF4;
     font-size: 2rem;
-    font-weight: 700;
     height: 100vh;
     width: 25vw;
     display: flex;
@@ -34,15 +33,19 @@ form {
 
 .title-container {
     display: flex;
-    justify-content: baseline;
-    gap: 2.35em;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 0.5em;
     padding-bottom: 2em;
+    margin-left: 0.6em;
 } 
 
 .body-container {
     display: flex;
-    gap: 1.85em;
-    padding-bottom: 0.75em;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 0.5em;
+    padding-bottom: 0.5em;
 } 
 
 .title-input,
@@ -54,26 +57,27 @@ form {
 }
 
 .title-input {
-    height: 3rem;
+    height: 8vh;
 }
 
 .body-input {
-    height: 5rem;
+    height: 12vh;
 }
 
 .label {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 300;
 }
 
 .save-button {
     background-color: #1F1F3C;
-    border: 0.25em solid #1F1F3C;
+    border: 0.25rem solid #1F1F3C;
     color: #EAEAF4;
-    font-size: 2rem;
-    margin-left: 3.25em;
+    font-size: 2.25rem;
     width: 50vw;
     height: 10vh;
+    margin-left: 2.5em;
+   
 }
 
 .save-button:hover:not([disabled]){
@@ -110,41 +114,44 @@ form {
     overflow: hidden;
 } 
 
+.mini-card-header {
+    background-color: #1F1F3C;
+    height: 12vh;
+    margin-top: -1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.white-star {
+    background-image: url(./assets/star.svg);
+    background-color: transparent;
+    height: 9vh;
+    width: 9vw;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+  
+.orange-star {
+    background-image: url(./assets/star-active.svg);
+    background-color: transparent;
+    height: 9vh;
+    width: 9vw;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+  
 .delete-button {
     background-image: url(./assets/delete.svg);
     background-color: transparent;
-    height: 3rem;
-    width: 3rem;
+    height: 10vh;
+    width: 10vw;
     border: none;
     background-repeat: no-repeat;
-}
-
-.mini-card-header {
-    background-color: #1F1F3C;
-    height: 2.5rem;
-    margin-top: -5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: end;
-}
-
-.orange-star {   
-    background-image: url(./assets/star-active.svg);
-    background-color: transparent;
-    height: 3rem;
-    width: 3rem;
-    border: none;
-    background-repeat: no-repeat;
-}
-
-.white-star {   
-    background-image: url(./assets/star.svg);
-    background-color: transparent;
-    height: 3rem;
-    width: 3rem;
-    border: none;
-    background-repeat: no-repeat;
-}
+    background-position: left center;
+} 
 
 .hidden {
     display: none;
