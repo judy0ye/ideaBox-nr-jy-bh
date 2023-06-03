@@ -1,6 +1,10 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #EAEAF4;
     display: flex;
@@ -9,112 +13,138 @@ body {
 header {
     background-color: #1F1F3C;
     color:#EAEAF4;
-    font-size: 80px;
+    font-size: 2rem;
     font-weight: 700;
-    height: 100dvh;
+    height: 100vh;
     width: 25vw;
     display: flex;
-    justify-content: flex-start;
-    flex-flow: column wrap;
-    align-content: center;
+    justify-content: space-around; 
+    align-items: flex-start; 
 } 
 
 form {
     background-color: #A8AAD2;
     color: #1F1F3C;
-    font-size: 40px;
+    font-size: 1.5rem;
     font-weight: 300;
-    height: 40dvh;
+    height: 50vh;
     width: 75vw;
     padding: 1em 2em;
-    display: flex;
-    flex-flow: column wrap;
-}
-
-p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    }
-
-.header-title {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    padding-top: 10px;
 }
 
 .title-container {
     display: flex;
     justify-content: baseline;
-    gap: 40px;
-    padding-bottom: 2em;;
+    gap: 2.35em;
+    padding-bottom: 2em;
 } 
 
 .body-container {
     display: flex;
-    gap: 20px;
-    padding-bottom: 1em;
+    gap: 1.85em;
+    padding-bottom: 0.75em;
 } 
 
-.title-input {
+.title-input,
+.body-input {
+    font-size: 2rem;
     background-color: #FFFFFF;
-    border: 6px solid #1F1F3C;
-    height: 5dvh;
-    width: 65vw;
+    border: 0.25rem solid #1F1F3C;
+    width: 50vw;
+}
 
+.title-input {
+    height: 3rem;
 }
 
 .body-input {
-    background-color: #FFFFFF;
-    border: 6px solid #1F1F3C;
-    height: 12dvh;
-    width: 65vw;
+    height: 5rem;
 }
 
-.title-label {
-    padding-top: 10px;
-    font-size: 40px;
-    font-weight: 300;
-}
-
-.body-label {
-    padding-top: 40px;
-    font-size: 40px;
+.label {
+    font-size: 1rem;
     font-weight: 300;
 }
 
 .save-button {
     background-color: #1F1F3C;
-    border: 8px solid #1F1F3C;
+    border: 0.25em solid #1F1F3C;
     color: #EAEAF4;
-    font-size: 50px;
-    margin-left: 120px;
-    width:66vw;
-    height: 10dvh;
+    font-size: 2rem;
+    margin-left: 3.25em;
+    width: 50vw;
+    height: 10vh;
+}
+
+.save-button:hover:not([disabled]){
+    color: yellow;
+}
+
+.save-button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .card-grid {
-    height: 50dvh;
+    height: 50vh;
+    width: 75vw;
     background-color: #EAEAF4;
     margin-bottom: 0;
-    display:flex;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: auto;
 }
 
 .mini-card {
-    height: 45dvh;
+    height: 45vh;
     width: 20vw;
-    border: 8px solid #1F1F3C;
+    border: 0.25em solid #1F1F3C;
     background-color: #FFFFFF;
     color: #1F1F3C;
-    font-size: 40px;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
     flex-flow: column wrap;
     align-items:center; 
+    overflow: hidden;
+} 
+
+.delete-button {
+    background-image: url(./assets/delete.svg);
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.mini-card-header {
+    background-color: #1F1F3C;
+    height: 2.5rem;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: end;
+}
+
+.orange-star {   
+    background-image: url(./assets/star-active.svg);
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.white-star {   
+    background-image: url(./assets/star.svg);
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
 }
