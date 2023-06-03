@@ -1,7 +1,7 @@
 // Data Model
 var ideas = [];
 var currentIdea;
-
+// var starred = makeFavorite()
 // querySelectors
 var saveButton = document.querySelector(".save-button");
 var titleInput = document.getElementById("input-title");
@@ -84,9 +84,9 @@ function showCards() {
     cardGrid.innerHTML += `
         <article class="mini-card" id="${ideas[i].id}">
             <header class="mini-card-header">
-                <button class="orange-star hidden"></button> 
-                <button class="white-star"></button>
-                <button class="delete-button"></button>
+              <button class="orange-star hidden"></button> 
+              <button class="white-star"></button> 
+              <button class="delete-button"></button>
             </header>
             <h2> ${ideas[i].title} </h2>
             <p> ${ideas[i].body}</p>
@@ -94,12 +94,17 @@ function showCards() {
   }
 }
 
+// var whiteStar = !ideas[i].isFavorite;
+// var orangeStar = ideas[i].isFavorite;
+{/* <button class="orange-star hidden ${orangeStar}"></button> 
+<button class="white-star ${whiteStar}"></button> */}
 
 function deleteMiniCard(e) {
   for (var i = 0; i < ideas.length; i++) {
     if (e.target.classList.contains('delete-button')) {
       ideas.splice(i, 1);
-      showCards();
+      showCards()
+      return
     }
   }
 }
@@ -121,6 +126,9 @@ function makeFavorite(e) {
       toggleClass(e.target, 'hidden');
       toggleClass(e.target.parentElement.children[1], 'hidden')
     }
+    return
   } 
 }
+
+
 
