@@ -144,6 +144,28 @@ p {
     height: 2.5rem;
     margin-top: -5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: end;
+}
+
+.orange-star {   
+    background-image: url(./assets/star-active.svg);
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.white-star {   
+    background-image: url(./assets/star.svg);
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
 }
