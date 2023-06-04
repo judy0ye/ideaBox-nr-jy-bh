@@ -10,13 +10,14 @@
 <body>
     <header>
         <h1 class="header-title">IdeaBox</h1>
+        <button id="filterButton" class="show-starred-button non-favorites">Show Starred Ideas</button>
     </header>
     <main>
         <section>
             <form class="idea-form">
                 <article class="title-container">
                     <label class="title-label" for="input-title">Title</label>
-                    <input class="title-input" type="text" id="input-title" name="input-title" oninput="checkInput()">
+                    <input class="title-input" type="text" id="input-title" name="input-title" maxlength="20" oninput="checkInput()">
                 </article>
                 <article class="body-container">
                     <label class="body-label" for="input-body">Body</label>
