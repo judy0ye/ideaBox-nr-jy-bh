@@ -2,7 +2,7 @@
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-This application allows users to save their ideas on a platform. The ideas will display onto a minicard on the webpage with a title and body. The users can also categorize their ideas into a "favorites" section and an "all ideas" section. They can choose to favorite and unfavorite their ideas.
+This application allows users to save their ideas on a platform. The ideas will display onto a minicard on the webpage with a title and body. The users can also categorize their ideas into a "favorites" section and an "all ideas" section. They could choose to favorite and unfavorite their ideas.
 
 
 ### Installation Instructions:
@@ -20,7 +20,7 @@ In order to use this project, please follow the steps below:
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-We worked on it for approximately  days and we are 4 weeks into Module 1.
+We worked on it for approximately 5 days and we are 4 weeks into Module 1.
 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
@@ -35,11 +35,10 @@ The learning goals include using HTML and CSS to build an application that match
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
 Wins:
-- 
 
-- 
+- We gained a better understanding of CSS and DOM manipulation. 
+
 
 Challenges:
-- 
 
-- 
+- The CSS was difficult to manipulate.
