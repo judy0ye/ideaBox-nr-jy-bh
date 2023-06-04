@@ -21,7 +21,9 @@ header {
     font-weight: 700;
     height: 100vh;
     width: 25vw;
+
     gap: 1.5vh;
+
 } 
 
 .show-starred-button {
@@ -170,3 +172,4 @@ form {
 .hidden {
     display: none;
 }
+

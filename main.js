@@ -2,15 +2,21 @@
 var ideas = [];
 var currentIdea;
 
+
 // querySelectors
 var saveButton = document.querySelector(".save-button");
 var titleInput = document.getElementById("input-title");
 var bodyInput = document.getElementById("input-body");
 var cardGrid = document.querySelector(".card-grid");
-
+var favoritesButton = document.querySelector('#filterButton');
+var cards = document.getElementsByClassName('mini-card');
 // eventListeners
 saveButton.addEventListener("click", function(e) {
   makeNewIdea(e);
+});
+
+favoritesButton.addEventListener('click', function(e){
+  toggleFavorites(e)
 });
 
 cardGrid.addEventListener('click', function (e) {
@@ -81,10 +87,17 @@ function checkInput(){
 }
 
 function showCards() {
+  var filterCheck;
   cardGrid.innerHTML = "";
   for (var i = 0; i < ideas.length; i++) {
+    if(ideas[i].isFavorite === false && !(favoritesButton.classList.contains('non-favorites'))){
+      filterCheck = 'hidden'
+    }
+    else{
+      filterCheck = '';
+    }
     cardGrid.innerHTML += `
-        <article class="mini-card" id="${ideas[i].id}">
+        <article class="mini-card ${filterCheck}" id="${ideas[i].id}">
             <header class="mini-card-header">
               <button class="orange-star ${ideas[i].orangeStar} "></button> 
               <button class="white-star ${ideas[i].whiteStar}"></button>
@@ -117,8 +130,6 @@ function makeFavorite(e) {
       ideas[i].isFavorite = true;
       ideas[i].whiteStar = "hidden"
       ideas[i].orangeStar = ""
-      toggleClass(e.target, 'hidden');
-      toggleClass(e.target.parentElement.firstElementChild, 'hidden');
     }
   }
   showCards()
@@ -136,4 +147,51 @@ function unfavorite(e) {
     }
   }
   showCards()
+}
+
+// function toggleFilter() {
+//   filterFavorites = !filterFavorites;
+  
+//   if (filterFavorites) {
+//     filterButton.innerHTML = "Show All Ideas";
+//     showCards('yes')
+//     //showFavorites();
+//   } else {
+//     filterButton.innerHTML = "Show Starred Ideas";
+//     showCards();
+//     //showAllIdeas();
+//   }
+// }
+function toggleFavorites(event){
+  if(event.target.classList.contains('non-favorites')){
+    showFavorites();
+    filterButton.innerHTML = "Show All Ideas";
+    event.target.classList.remove('non-favorites')
+  }
+  else{
+    showAllIdeas();
+    filterButton.innerHTML = "Show Starred Ideas";
+    event.target.classList.add('non-favorites');
+  }
+}
+
+
+function showFavorites(){
+  var idList = [];
+  for(var i = 0; i < ideas.length ; i++){
+  if(ideas[i].isFavorite === false){
+    idList.push(ideas[i].id)
+  }
+  }
+  for(var i = 0; i < cards.length; i++){
+    if(idList.includes(parseInt(cards[i].id))){
+      cards[i].classList.add('hidden');
+    }
+  }
+}
+
+function showAllIdeas(){
+  for(var i = 0; i< cards.length; i++){
+    cards[i].classList.remove('hidden');
+  }
 }
