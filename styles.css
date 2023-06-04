@@ -139,11 +139,11 @@ form {
 
 .white-star {   
     background-image: url(./assets/star.svg);
-    /* background-color: transparent;
+    background-color: transparent;
     height: 3rem;
     width: 3rem;
     border: none;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 
 

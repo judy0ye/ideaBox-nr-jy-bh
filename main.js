@@ -1,7 +1,7 @@
 // Data Model
 var ideas = [];
 var currentIdea;
-// var starred = makeFavorite()
+
 // querySelectors
 var saveButton = document.querySelector(".save-button");
 var titleInput = document.getElementById("input-title");
@@ -12,22 +12,16 @@ var cardGrid = document.querySelector(".card-grid");
 saveButton.addEventListener("click", function(e) {
   makeNewIdea(e);
 });
-// cardGrid.addEventListener("click", function(e) {
-//   deleteMiniCard(e);
-// });
-// cardGrid.addEventListener('click', function(e) {
-//   makeFavorite(e)
-// });
+
 cardGrid.addEventListener('click', function (e) {
   if (e.target.classList.contains('white-star')) {
     makeFavorite(e);
   } else if (e.target.classList.contains('orange-star')) {
-      UnFavorite(e);
+      unfavorite(e);
   } else if (e.target.classList.contains('delete-button')) {
     deleteMiniCard(e);
   }
 });
-
 
 saveButton.addEventListener('mouseover', function(){
     if(!saveButton.disabled){
@@ -85,20 +79,10 @@ function checkInput(){
         saveButton.disabled = true;
     }
 }
-// var whiteStar 
-var orangeStar 
 
 function showCards() {
   cardGrid.innerHTML = "";
   for (var i = 0; i < ideas.length; i++) {
-    // orangeStar = ideas[i].isFavorite
-    // whiteStar = !ideas[i].isFavorite
-    // console.log(orangeStar)
-  //   if (ideas[i].isFavorite = true) {
-  //     orangeStar = '';
-  //   } else {
-  //     orangeStar = 'hidden'
-  //   }
     cardGrid.innerHTML += `
         <article class="mini-card" id="${ideas[i].id}">
             <header class="mini-card-header">
@@ -112,35 +96,15 @@ function showCards() {
   }
 }
 
-{/* <button class="white-star ${ideas[i].whiteStar}"></button>  */}
-// for (var i = 0; i < ideas.length; i++) {
-//   for (var j = 0; j < cardGrid.children[0].children[0].children.length; j++) {
-//     if (cardGrid.children[0].children[0].children[j].classList.contains('orange-star')) {
-//       ideas[i].isFavorite = true
-//     }
-//     if (cardGrid.children[0].children[0].children[j].classList.contains('white-star')) {
-//       ideas[i].isFavorite = false
-//     }
-//   }
-// var whiteStar = !ideas[i].isFavorite;
-// var orangeStar = ideas[i].isFavorite;
-{/* <button class="orange-star hidden ${orangeStar}"></button> 
-<button class="white-star ${orangeStar}""></button> */}
-
 function deleteMiniCard(e) {
   for (var i = 0; i < ideas.length; i++) {
     if (parseInt(e.target.parentElement.parentElement.id) === ideas[i].id) {
       console.log(e.target)
       ideas.splice(i, 1);
       showCards()
-      //return
     }
-  }
-   
+  }  
 }
-
-// parseInt(e.target.closest('article').id)
-// e.target.classList.contains('delete-button')
 
 function toggleClass(element, className) {
   element.classList.toggle(className)
@@ -157,10 +121,10 @@ function makeFavorite(e) {
       toggleClass(e.target.parentElement.firstElementChild, 'hidden');
     }
   }
-  //showCards()
+  showCards()
 }
 
-function UnFavorite(e) {
+function unfavorite(e) {
   for (var i = 0; i < ideas.length; i++) {
     if (parseInt(e.target.closest('.mini-card').id) === ideas[i].id) {
       console.log(e.target)
@@ -171,5 +135,5 @@ function UnFavorite(e) {
       toggleClass(e.target.parentElement.children[1], 'hidden');
     }
   }
-  //showCards()
+  showCards()
 }
