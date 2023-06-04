@@ -5,54 +5,66 @@
 }
 
 body {
+    display: flex; 
     font-family: 'Poppins', sans-serif;
     background-color: #EAEAF4;
-    display: flex;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
     background-color: #1F1F3C;
     color:#EAEAF4;
-    font-size: 2rem;
+    font-size: 2.5vw;
+    font-weight: 700;
     height: 100vh;
     width: 25vw;
-    display: flex;
-    justify-content: space-around; 
-    align-items: flex-start; 
+    gap: 1.5vh;
 } 
+
+.show-starred-button {
+    background-color: #A8AAD2;
+    border: 0.5vw solid #A8AAD2;
+    color: #1F1F3C;
+    font-weight: 600;
+    font-size: 2vw;
+    width: 20vw;
+    height: 8vh;
+}
 
 form {
     background-color: #A8AAD2;
     color: #1F1F3C;
-    font-size: 1.5rem;
     font-weight: 300;
     height: 50vh;
     width: 75vw;
-    padding: 1em 2em;
+    padding: 2vw 7vw;
 }
 
 .title-container {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    gap: 0.5em;
-    padding-bottom: 2em;
-    margin-left: 0.6em;
+    gap: 0.75vw;
+    padding-bottom: 4vh;
+    margin-left: 0.9vw;
 } 
 
 .body-container {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    gap: 0.5em;
-    padding-bottom: 0.5em;
+    gap: 0.75vw;
+    padding-bottom: 2vh;
 } 
 
 .title-input,
 .body-input {
-    font-size: 2rem;
+    font-size: 2vw;
     background-color: #FFFFFF;
-    border: 0.25rem solid #1F1F3C;
+    border: 0.3vw solid #1F1F3C;
     width: 50vw;
 }
 
@@ -61,22 +73,22 @@ form {
 }
 
 .body-input {
-    height: 12vh;
+    height: 15vh;
 }
 
 .label {
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 300;
 }
 
 .save-button {
     background-color: #1F1F3C;
-    border: 0.25rem solid #1F1F3C;
+    border: 0.25vw solid #1F1F3C;
     color: #EAEAF4;
-    font-size: 2.25rem;
+    font-size: 2.25vw;
     width: 50vw;
-    height: 10vh;
-    margin-left: 2.5em;
+    height: 8vh;
+    margin-left: 5.7vw;
    
 }
 
@@ -91,43 +103,45 @@ form {
 }
 
 .card-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 50vh;
     width: 75vw;
     background-color: #EAEAF4;
     margin-bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .mini-card {
-    height: 45vh;
-    width: 20vw;
-    border: 0.25em solid #1F1F3C;
-    background-color: #FFFFFF;
-    color: #1F1F3C;
-    font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
     flex-flow: column wrap;
-    align-items:center; 
+    align-items: center; 
+    height: 45vh;
+    width: 20vw;
+    border: 0.45vw solid #1F1F3C;
+    background-color: #FFFFFF;
+    color: #1F1F3C;
+    font-size: 1.5vw;
     overflow: hidden;
 } 
 
 .mini-card-header {
-    background-color: #1F1F3C;
-    height: 12vh;
-    margin-top: -1em;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #1F1F3C;
+    height: 15vh;
+    margin-top: -10vh;
+    padding-top: 5vh; 
 }
 
 .white-star {
     background-image: url(./assets/star.svg);
     background-color: transparent;
-    height: 9vh;
-    width: 9vw;
+    height: 10vh;
+    width: 10vw;
     border: none;
     background-repeat: no-repeat;
     background-position: left center;
@@ -136,21 +150,19 @@ form {
 .orange-star {
     background-image: url(./assets/star-active.svg);
     background-color: transparent;
-    height: 9vh;
-    width: 9vw;
-    border: none;
     background-repeat: no-repeat;
-    background-position: left center;
+    height: 10vh;
+    width: 10vw;
+    border: none;
 }
   
 .delete-button {
     background-image: url(./assets/delete.svg);
     background-color: transparent;
-    height: 10vh;
-    width: 10vw;
-    border: none;
     background-repeat: no-repeat;
-    background-position: left center;
+    height: 12vh;
+    width: 12vw;
+    border: none;
 } 
 
 .hidden {
