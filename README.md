@@ -16,6 +16,7 @@ In order to use this project, please follow the steps below:
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![ezgif-2-46b7dc63a9](https://github.com/judy0ye/whats-for-dinner/assets/129805348/ffe4ac82-c1f7-48b2-8c6b-e70d9eac5473)
 
 
 ### Context:
