@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <title>Idea Box</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <h1 class="header-title">IdeaBox</h1>
-        <button id="filterButton" class="show-starred-button non-favorites">Show Starred Ideas</button>
+        <button class="show-starred-button non-favorites" id="filterButton">Show Starred Ideas</button>
     </header>
     <main>
         <section>
             <form class="idea-form">
                 <article class="title-container">
-                    <label class="title-label" for="input-title">Title</label>
-                    <input class="title-input" type="text" id="input-title" name="input-title" maxlength="20" oninput="checkInput()">
+                    <label class="label" for="input-title">Title</label>
+                    <input class="title-input" type="text" id="input-title" name="input-title" maxlength="13" oninput="checkInput()">
                 </article>
                 <article class="body-container">
-                    <label class="body-label" for="input-body">Body</label>
+                    <label class="label" for="input-body">Body</label>
                     <input class="body-input" type="text" id="input-body" name="input-body" oninput="checkInput()">
                 </article>   
                     <button class="save-button" disabled>Save</button>
             </form>
         </section>
         <section class="card-grid">
-           
         </section>
     </main>
     <script src="main.js"></script>
