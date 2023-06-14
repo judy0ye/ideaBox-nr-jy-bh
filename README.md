@@ -25,9 +25,9 @@ We worked on it for approximately 5 days and we are 4 weeks into Module 1.
 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
-Judy Ye: https://github.com/judy0ye
-Banjamin Hatch: https://github.com/banjaminh
-Natalie Rodriguez: https://github.com/codinggeographer
+- Judy Ye: https://github.com/judy0ye
+- Banjamin Hatch: https://github.com/banjaminh
+- Natalie Rodriguez: https://github.com/codinggeographer
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
